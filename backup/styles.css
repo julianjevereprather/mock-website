@@ -1,0 +1,130 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Sticky Header */
+header {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space out the logo and nav */
+  align-items: center; /* Align logo and nav vertically */
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 100px; /* Adjust the logo height if needed */
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  gap: 20px; /* Space between links */
+  transition: transform 0.3s ease, shadow 0.3s ease;
+  width:"100%";
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.download-button img {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-button:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* FREE Sticker Image */
+.sticker {
+  position: absolute;
+  top: -10px;  /* Adjust the distance from the top of the card */
+  right: -10px;  /* Adjust the distance from the right of the card */
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  transform: scale(1);
+  animation: pulse 2s infinite ease-in-out;
+  z-index: 10;  /* Ensures the sticker stays above the card */
+}
+
+/* Animate the sticker to pulse bigger and smaller */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+/* Ensure the product card positions the sticker correctly */
+.product {
+  position: relative;  /* Make the product card the reference point for positioning */
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Style for the product section */
+.product-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin: 1em 0;
+}

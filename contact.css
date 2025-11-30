@@ -1,0 +1,102 @@
+/* Contact page specific CSS */
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #9751D3; /* Highlight color */
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #9751D3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #7E30DD;
+}
+
+.faq-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #9751D3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #7E30DD;
+    transform: translateY(-2px);
+}
+
+.faq-answer {
+    max-height: 0; /* Start in collapsed state */
+    overflow: hidden;
+    opacity: 0; /* Start as invisible */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Animation for sliding and fading */
+    padding: 10 10px; /* Optional padding */
+}
+
+.faq-answer.show {
+    max-height: 1000px; /* Set this to a value higher than the content's height */
+    opacity: 1; /* Make it fully visible */
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 1000px;
+        opacity: 1;
+    }
+}
